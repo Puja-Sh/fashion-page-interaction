@@ -1,0 +1,28 @@
+.footerContainer {
+    display: flex;
+    z-index: 20;
+    left: 0;
+    border: 0;
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerContainer ul li {
+    list-style-type: none;
+    border: 1px solid #F3F1ED;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 3px;
+    opacity: 0.7;
+    background-color: #fff;
+}
+
+.footerContainer ul a {
+    display: flex;
+}
+.footerContainer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
