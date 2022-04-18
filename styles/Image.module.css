@@ -1,0 +1,53 @@
+
+
+
+
+.imageContainer {
+    position: relative;
+}
+
+.model {
+    width: 716px;
+    object-fit: contain;
+    position: relative;
+    z-index: 5;
+}
+
+.backgroundDesign1 {
+    height: 550px;
+    width: 550px;
+    border-radius: 100%;
+    background-color: #FBE9C4;
+    position: absolute;
+    z-index: 1;
+    top: 78px;
+    right: 0;
+}
+
+.backgroundDesign2 {
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    clip-path: polygon(55% 4%, 83% 12%, 100% 41%, 94% 78%, 78% 94%, 32% 100%, 5% 89%, 0% 43%, 12% 6%);
+    background-color: #fff1e0;
+    position: absolute;
+    z-index: 0;
+    top: 45px;
+    right: -29px;
+}
+.plusBtn {
+    outline: none;
+    border: none;
+    background-color: #232323;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    color: #cecece;
+    position: absolute;
+    z-index: 6;
+    top: 53%;
+    left: 21%;
+    align-self: center;
+    cursor: pointer;
+}

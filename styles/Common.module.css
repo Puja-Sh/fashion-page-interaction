@@ -1,0 +1,19 @@
+.arrowStyle1 {
+    height: 150px;
+    transform: rotate(195deg);
+    opacity: 0.6;
+    position: relative;
+    right: -159px;
+    top: 25px;
+}
+
+.arrowStyle2 {
+    height: 107px;
+    transform: rotate(333deg);
+    opacity: 0.6;
+    position: absolute;
+    /* right: -159px; */
+    bottom: 31px;
+    z-index: 15;
+    right: 26px;
+}
