@@ -3,11 +3,10 @@ import styles from '../../styles/Image.module.css';
 import Arrow2 from "../common/Arrow2";
 import CardList from "./CardList";
 
-const Image = ({cards}) => {
+const Image = ({cards,src}) => {
     return (
         <div className={styles.imageContainer}>
-            <img src={"/images/female-modal-1.png"} alt={"modal-1"} className={`${styles.model}`}/>
-            {/*<button className={styles.plusBtn}>+</button>*/}
+            <img src={src} alt={"modal-1"} className={`${styles.model}`}/>
             <div className={styles.backgroundDesign1}/>
             <div className={styles.backgroundDesign2}/>
             <CardList cards={cards}/>

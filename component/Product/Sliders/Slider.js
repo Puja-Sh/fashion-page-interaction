@@ -11,28 +11,36 @@ const Slider = () => {
     }
     const viewRef = useRef();
 
-    useEffect(()=>{
-        if(context){
-            gsap.to(viewRef.current,{duration:1, ease:'ease-in'})
+    useEffect(() => {
+        if (context) {
+            gsap.to(viewRef.current, {duration: 1, ease: 'ease-in'})
         }
     }, [context])
     return (
+
         <div className={styles.viewWrapper} ref={viewRef}>
-            <div className={styles.imgDiv}>
-                <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
-            </div>
-           <div className={styles.imgDiv}>
-               <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
-           </div>
-           <div className={styles.imgDiv}>
-               <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
-           </div>
-            <div className={styles.imgDiv}>
-                <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
-            </div>
+            {
+                window.screen.width >= 1280 ?
+                    <>
+                        <div className={styles.imgDiv}>
+                            <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
+                        </div>
+                        <div className={styles.imgDiv}>
+                            <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
+                        </div>
+                        <div className={styles.imgDiv}>
+                            <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
+                        </div>
+                        <div className={styles.imgDiv}>
+                            <img src={"/images/product-view-1.jpg"} className={`${styles.productView}`}/>
+                        </div>
+                    </>
+                    : null
+            }
+
 
             <button className={styles.closeBtn} onClick={closeHandler}>
-                <GrClose />
+                <GrClose/>
             </button>
         </div>
     );

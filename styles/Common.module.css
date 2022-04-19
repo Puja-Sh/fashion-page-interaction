@@ -17,3 +17,9 @@
     z-index: 15;
     right: 26px;
 }
+
+@media only screen and (max-width: 700px) {
+    .arrowStyle2, .arrowStyle1 {
+        display: none;
+    }
+}

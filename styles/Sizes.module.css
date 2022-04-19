@@ -32,6 +32,7 @@
 .sizes input[type="radio"]:checked + .sizeBtn{
     border: 1px solid #8d8d8d;
 }
+
 .sizeBtn {
     border-radius: 50%;
     align-items: center;

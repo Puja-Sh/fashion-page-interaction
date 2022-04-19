@@ -33,7 +33,7 @@
 .infoContainer {
     padding-left: 76px;
     width: 95%;
-
+    z-index: 20;
 }
 
 .productText {
@@ -41,9 +41,7 @@
     font-size: 3.5rem;
     align-self: center;
     margin-bottom: 10px;
-
-    /*padding-left: 62px;*/
-    /*position: absolute;*/
+    z-index: 20;
 }
 .productText div{
     font-family: 'Carrois Gothic', sans-serif;
@@ -64,4 +62,34 @@
     letter-spacing: 1px;
     line-height: 1.2;
     margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+    .productContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%!important;
+        border-bottom: 1px solid #F3F1ED;
+    }
+    .productTitle {
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        top: -94px;
+        position: relative;
+    }
+    .productText {
+        font-size: 35px;
+    }
+    .plusBtn {
+        align-self: flex-end;
+    }
+    .infoContainer {
+        padding: unset;
+        width: 80%;
+        z-index: 20;
+        float: right;
+    }
 }
