@@ -1,0 +1,48 @@
+
+.sizesContainer {
+
+    text-transform: uppercase;
+}
+
+.sizesContainer h3 {
+    margin-bottom: 2px;
+}
+
+.sizes {
+    display: flex;
+    align-items: center;
+
+}
+.sizes form {
+    display: flex;
+    cursor: pointer;
+}
+
+.sizes input[type="radio"] {
+    display: none;
+}
+.sizes p {
+    font-size: 20px;
+    color: #ecdf9b;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.sizes input[type="radio"]:checked + .sizeBtn{
+    border: 1px solid #8d8d8d;
+}
+.sizeBtn {
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    padding: 5px 10px;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: 1px solid #F3F1ED ;
+    margin-right: 10px;
+    transition: 0.5s all;
+}

@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from "../component/Navbar/Navbar";
 import ProductList from "../component/Product/ProductList";
-import {useRef} from "react";
+import {useRef, useState} from "react";
+import {Context} from "../context/Context";
 
 export default function Home() {
     const scrollHandler = (e) => {
@@ -18,8 +19,10 @@ export default function Home() {
         console.log(e.deltaY)
     }
     const scrollRef = useRef(null);
+    const [context, setContext] = useState(true);
 
     return (
+        <Context.Provider value={[context, setContext]}>
         <>
             <Head>
                 <title>Create Next App</title>
@@ -28,10 +31,10 @@ export default function Home() {
             </Head>
 
             <Navbar/>
-            <main className={styles.main} onWheel={scrollHandler} ref={scrollRef}>
+            <main className={`${styles.main}`} onWheel={scrollHandler} ref={scrollRef} >
                 <ProductList/>
             </main>
 
-        </>
+        </> </Context.Provider>
     )
 }

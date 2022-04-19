@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
 
 .plusBtn {
     outline: none;
@@ -7,6 +8,7 @@
     font-size: 25px;
     height: 50px;
     width: 50px;
+    min-width: 50px;
     color: #cecece;
     align-self: center;
     position: relative;
@@ -15,25 +17,52 @@
     cursor: pointer;
 }
 .productContainer {
+
     display: flex;
     justify-content: space-around;
     padding-right: 50px;
-    /*overflow-x: auto;*/
-    min-width: 80%;
-    /*width: 80%;*/
+    min-width: 81.5%;
+    width: 81.5%;
     height: calc(100vh - 74px);
-    border-right: 2px solid green;
+    border-right: 2px solid #F3F1ED;
 }
 
 .productTitle {
     display: flex;
 }
 
+.infoContainer {
+    padding-left: 76px;
+    width: 95%;
+
+}
 
 .productText {
     text-transform: uppercase;
     font-size: 3.5rem;
     align-self: center;
-    padding-left: 62px;
+    margin-bottom: 10px;
+
+    /*padding-left: 62px;*/
     /*position: absolute;*/
+}
+.productText div{
+    font-family: 'Carrois Gothic', sans-serif;
+}
+
+#radio-1:checked ~ label{
+    font-size: 30px;
+}
+.price {
+    font-weight: normal;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.productDesc {
+    font-size: 15px;
+    color: #151414;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 30px;
 }
