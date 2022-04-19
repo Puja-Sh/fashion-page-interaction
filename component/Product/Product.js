@@ -9,29 +9,27 @@ import {gsap} from "gsap";
 
 const Product = ({line1, line2, cards}) => {
     const [context, setContext] = useContext(Context);
-    const [visible, setVisible] = useState(true);
+    const [visibile, setVisibile] = useState(true)
     const [width, setWidth] = useState(false)
 
     const infoRef = useRef();
     const productContainerRef = useRef();
 
     const showSizes = () => {
-        setContext(!visible)
-        setVisible(!visible);
+        setContext(!context)
+        setVisibile(!context)
         setWidth(!width)
     }
 
-    console.log(context)
     useEffect(() => {
-        if(context==false) {
+        if(context) {
             gsap.to(infoRef.current,{duration:1,y:'-150px', ease:'ease-in'})
             gsap.to(productContainerRef.current,{duration:1, ease:'ease-in', minWidth:'100%', width:'100%'})
+        } else {
+            gsap.to(infoRef.current,{duration:1,y:'0px', ease:'ease-in'})
+            gsap.to(productContainerRef.current,{duration:1, ease:'ease-in', minWidth:'81.5%', width:'81.5%'})
         }
-
-        setTimeout(() => {
-            setContext(true)
-        },2000)
-    })
+    },[context])
 
     return (
         <div className={styles.productContainer} ref={productContainerRef}>
@@ -41,12 +39,18 @@ const Product = ({line1, line2, cards}) => {
                     <div className={styles.infoContainer} ref={infoRef}>
                         <h1 className={styles.productText}>{line1} <br/> {line2}</h1>
                         {
-                            !visible ?
+                            context ?
                             <div>
-                                <h1 className={styles.price}>$98</h1>
-                                <p className={styles.productDesc}>Yellow rounded neck T-shirt. Short sleeves with lined prints on it. Cotton and
-                                    Comfy material</p>
-                                <Sizes/>
+                                <div>
+                                    <h1 className={styles.price}>$98</h1>
+                                    <p className={styles.productDesc}>Yellow rounded neck T-shirt. Short sleeves with lined prints on it. Cotton and
+                                        Comfy material</p>
+                                </div>
+
+                                <div>
+                                    <Sizes/>
+                                </div>
+
                             </div>
                             : null
                         }
@@ -55,13 +59,13 @@ const Product = ({line1, line2, cards}) => {
 
                 </div>
                 {
-                    visible ?
+                    !context ?
                     <button className={styles.plusBtn} onClick={showSizes}>+</button>
                     : null
                 }
 
             </div>
-            <Image cards={cards} visibility={visible}/>
+            <Image cards={cards}/>
 
         </div>
     );

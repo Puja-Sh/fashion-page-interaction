@@ -9,8 +9,10 @@ const Arrow1 = () => {
     const arrowRef = useRef();
 
     useEffect(()=>{
-        if(!context){
+        if(context){
             gsap.to(arrowRef.current,{duration:0.5,x:'300px', ease:'ease-in'})
+        } else {
+            gsap.to(arrowRef.current,{duration:1,x:'0px', ease:'ease-in'})
         }
     },[context])
 

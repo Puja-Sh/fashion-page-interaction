@@ -82,7 +82,7 @@ const ProductList = () => {
                 <Product line1={item.line1} line2={item.line2} cards={item.cards} key={index}/>
             ))}
             {
-                context ?
+                !context ?
                     <Footer/>
                     : null
             }

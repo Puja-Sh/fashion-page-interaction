@@ -17,10 +17,10 @@ export default function Home() {
             left: containerScrollPosition + e.deltaY,
         });
 
-        console.log(e.deltaY)
+        // console.log(e.deltaY)
     }
     const scrollRef = useRef(null);
-    const [context, setContext] = useState(null);
+    const [context, setContext] = useState(false);
 
     return (
         <Context.Provider value={[context, setContext]}>
