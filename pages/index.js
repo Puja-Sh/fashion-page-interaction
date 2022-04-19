@@ -5,6 +5,7 @@ import ProductList from "../component/Product/ProductList";
 import {useRef, useState} from "react";
 import {Context} from "../context/Context";
 
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 export default function Home() {
     const scrollHandler = (e) => {
         e.preventDefault();
@@ -19,7 +20,7 @@ export default function Home() {
         console.log(e.deltaY)
     }
     const scrollRef = useRef(null);
-    const [context, setContext] = useState(true);
+    const [context, setContext] = useState(null);
 
     return (
         <Context.Provider value={[context, setContext]}>
