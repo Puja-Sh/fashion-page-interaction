@@ -67,7 +67,7 @@
 @media only screen and (max-width: 700px) {
     .productContainer {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%!important;
         border-bottom: 1px solid #F3F1ED;
     }
@@ -76,7 +76,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         top: -94px;
         position: relative;
     }
@@ -85,6 +85,8 @@
     }
     .plusBtn {
         align-self: flex-end;
+        bottom: -132px;
+        left: 0;
     }
     .infoContainer {
         padding: unset;
